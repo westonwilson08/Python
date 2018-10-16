@@ -1,3 +1,13 @@
+'''
+This Python script is used to check OSINT information on a proxy whitelist request.
+
+Inputs taken are website url to be whitelisted and ServiceNow ticket number.
+
+Outputs returned results from the BlueCoats, Symantec site review, Norton McAfee, VirusTotal, Zulu Zscaler, and SSL Labs.
+
+The formatted information returned last can be pasted into ServiceNow tickets if the POST action fails.
+'''
+
 import json
 import re
 import time
@@ -35,14 +45,6 @@ from requests.auth import HTTPBasicAuth
 auth = HTTPBasicAuth(username, password)
 
 
-'''
-Python script to check OSINT information on a proxy whitelist request.
-
-Input of website url to be whitelisted.
-Outputs returned results from the BlueCoats, Symantec site review, Norton McAfee, VirusTotal, Zulu Zscaler, and SSL Labs.
-
-The formatted information returned last can be pasted into ServiceNow tickets.
-'''
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 print("====================================================")
