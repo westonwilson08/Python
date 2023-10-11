@@ -58,15 +58,16 @@ get_projects = ''
 class Ui_Dialog(object):
     # Save username/password
     def __init__(self):
-        self.tableWidget = QtWidgets.QTableWidget(self.frame_3)
         self.frame_3 = QtWidgets.QFrame(Dialog)
+        self.frame_2 = QtWidgets.QFrame(Dialog)
+        self.frame = QtWidgets.QFrame(Dialog)
+        self.tableWidget = QtWidgets.QTableWidget(self.frame_3)
         self.getTime = QtWidgets.QPushButton(Dialog)
         self.username = QtWidgets.QLineEdit(self.frame_2)
         self.password = QtWidgets.QLineEdit(self.frame_2)
         self.label_3 = QtWidgets.QLabel(self.frame_2)
         self.label_2 = QtWidgets.QLabel(self.frame_2)
         self.auth = QtWidgets.QPushButton(self.frame_2)
-        self.frame_2 = QtWidgets.QFrame(Dialog)
         self.label_10 = QtWidgets.QLabel(self.frame)
         self.hours = QtWidgets.QLineEdit(self.frame)
         self.addTime = QtWidgets.QPushButton(self.frame)
@@ -75,7 +76,6 @@ class Ui_Dialog(object):
         self.task = QtWidgets.QComboBox(self.frame)
         self.project = QtWidgets.QComboBox(self.frame)
         self.client = QtWidgets.QComboBox(self.frame)
-        self.frame = QtWidgets.QFrame(Dialog)
         self.label_6 = QtWidgets.QLabel(Dialog)
         self.time_notes = QtWidgets.QPlainTextEdit(Dialog)
         self.label_5 = QtWidgets.QLabel(Dialog)
